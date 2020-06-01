@@ -4749,7 +4749,7 @@ cite {
   height: 100vh;
   min-height: 700px;
   position: relative;
-  background-image: url(../img/bg_contact.jpg);
+  background-image: url(../img/bg_section.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5145,20 +5145,12 @@ cite {
   text-decoration: none;
 } 
 
-.grid-item a:visited {
-  text-decoration: none;
-}
-
-.grid-item a:hover {
-  text-decoration: none;
-}
-
-.grid-item a:active {
-  text-decoration: underline;
-}
-
 .grid-item:hover{
    background-color: pink;
+}
+
+.grid-item p{
+  color: black;
 }
 
 #advisors .grid-container{
