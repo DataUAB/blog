@@ -4591,7 +4591,7 @@ cite {
 }
 
 #tags {
-  background-color: #ffffff;
+  background-color: #262626;
   padding: 2rem 1rem 4rem;
   width: 960px;
   max-width: 90%;
@@ -4601,7 +4601,7 @@ cite {
 #tags h1 {
   text-align: center;
   margin: 2rem 0 3rem;
-  color: #262626;
+  color: #ffffff;
 }
 
 #tags .tags {
@@ -5050,8 +5050,7 @@ cite {
     padding-right: 0.5rem;
     margin: 0 0.5rem 0.5rem 0;
   }
-
-
+  
   .recent_box .recent_title {
     font-size: 1.3rem;
   }
@@ -5073,6 +5072,15 @@ cite {
   .post header .post_title {
     padding: 0.8rem;
     font-size: 1.2rem;
+  }
+
+  .post-grid-container {
+    grid-template-areas:
+      'image'
+      'image'
+      'date'
+      'author'
+      'tags';
   }
 }
 .div_formula {
@@ -5162,3 +5170,131 @@ cite {
 }
 
 /* INNA */
+
+#categories{
+  background-image: url(../img/bg_section.jpg);
+  padding-bottom: 3%;
+}
+
+#categories-filter{
+  width: 75%;
+  margin: auto;
+  padding-top: 1%;
+  margin-bottom: 5%;
+}
+
+#categories-title{
+  text-align: center;
+  color: white;
+}
+
+#categories-filter button{
+  color: white;
+  outline:none;
+  cursor: pointer;
+  height: 75%;
+  border-radius: 16px;
+  border: 1px solid white;
+  background-color: #1c1c1c;
+}
+
+.posts{
+  display: none;
+}
+
+.post{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 25px;
+  background-color: #262626;
+  border-radius: 16px;
+}
+
+.post-grid-container {
+  display: grid;
+  grid-template-areas:
+    'image title title'
+    'image date author'
+    'tags tags tags';
+  grid-gap: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+.post-grid-container:hover{
+  background-color: #FF3591;
+  color: black;
+}
+
+.post-grid-container div{
+  text-align: center;
+}
+
+.post-title{
+  grid-area: title;
+}
+
+.post-image{
+  grid-area: image;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 200px;
+  height: 100px;
+}
+
+.post-image img{
+  width: 200px;
+  height: 100px;
+}
+
+.post-date{
+  grid-area: date;
+}
+
+.post-author{
+  grid-area: author;
+}
+
+.post-tags{
+  grid-area: tags;
+}
+
+.tag{
+  color: white;
+  padding: 2px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.post-grid-container:hover .tag{
+  border: 1px solid black;
+  color: black;
+}
+
+@media only screen and (max-width: 730px){
+
+  .post-image{
+    width: 70%;
+    height: auto;
+    margin:auto;
+  }
+
+  .post-image img{
+    margin:auto;
+    width: 100px;
+    height: 50px;
+  }
+
+  .post-grid-container {
+    grid-template-areas:
+    'image'
+    'title'
+    'date'
+    'author'
+    'tags';
+  }
+}
