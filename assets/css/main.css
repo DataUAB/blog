@@ -4591,7 +4591,7 @@ cite {
 }
 
 #tags {
-  background-color: #ffffff;
+  background-color: #262626;
   padding: 2rem 1rem 4rem;
   width: 960px;
   max-width: 90%;
@@ -4601,7 +4601,7 @@ cite {
 #tags h1 {
   text-align: center;
   margin: 2rem 0 3rem;
-  color: #262626;
+  color: #ffffff;
 }
 
 #tags .tags {
@@ -4697,9 +4697,9 @@ cite {
 .about {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   min-height: 700px;
-  background-image: url(../img/uab_campus.jpg);
+  background-image: url(../img/bg_section.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -4749,7 +4749,7 @@ cite {
   height: 100vh;
   min-height: 700px;
   position: relative;
-  background-image: url(../img/bg_contact.jpg);
+  background-image: url(../img/bg_section.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4827,6 +4827,11 @@ cite {
       -ms-transform: translateY(2px);
           transform: translateY(2px);
 }
+
+
+
+
+
 
 #banner,
 .main_header,
@@ -4977,6 +4982,9 @@ cite {
   .author .author_social span {
     font-size: 0.7rem;
   }
+  #contributors .grid-container {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -4999,6 +5007,9 @@ cite {
   }
   p {
     font-size: 1rem;
+  }
+  #contributors .grid-container {
+    grid-template-columns: auto auto;
   }
 }
 
@@ -5039,6 +5050,8 @@ cite {
     padding-right: 0.5rem;
     margin: 0 0.5rem 0.5rem 0;
   }
+
+
   .recent_box .recent_title {
     font-size: 1.3rem;
   }
@@ -5067,4 +5080,213 @@ cite {
     margin: 10px;
 }
 .chapter img {
+}
+
+/* Inna Improvements */
+
+#about{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 700px;
+  background-image: url(../img/bg_section.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#about-content{
+  height: auto;
+  width: 50%;
+  margin: auto;
+  background-color: none;
+  border-radius: 16px;
+}
+
+.about-user-title
+{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  color: white;
+  margin-top: 5px;
+  border-radius: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  margin: 3px;
+  height: 160px;
+  border-radius: 16px;
+}
+
+.grid-item img {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.grid-item a{
+  font-size: 15px;
+}
+
+.grid-item a:link {
+  text-decoration: none;
+} 
+
+.grid-item:hover{
+   background-color: pink;
+}
+
+.grid-item p{
+  color: black;
+}
+
+#advisors .grid-container{
+  grid-template-columns: auto auto;
+}
+
+#admins .grid-container{
+  grid-template-columns: auto auto;
+}
+
+/* INNA */
+
+#categories{
+  background-image: url(../img/bg_section.jpg);
+  padding-bottom: 3%;
+}
+
+#categories-filter{
+  width: 75%;
+  margin: auto;
+  padding-top: 1%;
+  margin-bottom: 5%;
+}
+
+#categories-title{
+  text-align: center;
+  color: white;
+}
+
+#categories-filter button{
+  color: white;
+  outline:none;
+  cursor: pointer;
+  height: 75%;
+  border-radius: 16px;
+  border: 1px solid white;
+  background-color: #1c1c1c;
+}
+
+.posts{
+  display: none;
+}
+
+.category-post{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 25px;
+  background-color: #262626;
+  border-radius: 16px;
+}
+
+.post-grid-container {
+  display: grid;
+  grid-template-areas:
+    'image title title'
+    'image date author'
+    'tags tags tags';
+  grid-gap: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+.post-grid-container:hover{
+  background-color: #FF3591;
+  color: black;
+}
+
+.post-grid-container div{
+  text-align: center;
+}
+
+.post-title{
+  grid-area: title;
+}
+
+.post-image{
+  grid-area: image;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 200px;
+  height: 100px;
+}
+
+.post-image img{
+  width: 200px;
+  height: 100px;
+}
+
+.post-date{
+  grid-area: date;
+}
+
+.post-author{
+  grid-area: author;
+}
+
+.post-tags{
+  grid-area: tags;
+}
+
+.tag{
+  color: white;
+  padding: 2px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.post-grid-container:hover .tag{
+  border: 1px solid black;
+  color: black;
+}
+
+@media only screen and (max-width: 730px){
+
+  .post-image{
+    width: 70%;
+    height: auto;
+    margin:auto;
+  }
+
+  .post-image img{
+    margin:auto;
+    width: 100px;
+    height: 50px;
+  }
+
+  .post-grid-container {
+    grid-template-areas:
+    'image'
+    'title'
+    'date'
+    'author'
+    'tags';
+  }
 }
